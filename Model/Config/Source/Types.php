@@ -36,8 +36,7 @@ class Types implements OptionSourceInterface
 
         $allCollectors = $this->crtList->getAllCollectorList();
         foreach ($allCollectors as $allCollector) {
-            $downaloders = $allCollector->getCollectors();
-            $types = array_keys($downaloders);
+            $types = array_keys($allCollector);
 
             foreach ($types as $type) {
                 $options[] = [
@@ -49,8 +48,7 @@ class Types implements OptionSourceInterface
 
         $allRefiners = $this->crtList->getAllRefinerList();
         foreach ($allRefiners as $allRefiner) {
-            $refiners = $allRefiner->getRefiners();
-            $types = array_keys($refiners);
+            $types = array_keys($allRefiner);
 
             foreach ($types as $type) {
                 $options[] = [
@@ -62,8 +60,7 @@ class Types implements OptionSourceInterface
 
         $allTransferors = $this->crtList->getAllTransferorList();
         foreach ($allTransferors as $allTransferor) {
-            $transferors = $allTransferor->getTransferors();
-            $types = array_keys($transferors);
+            $types = array_keys($allTransferor);
 
             foreach ($types as $type) {
                 $options[] = [
